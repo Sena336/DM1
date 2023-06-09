@@ -8,7 +8,7 @@ int rollDice() {
 
 int main() {
     int die1, die2, totalValue;
-
+    
     printf("Rolling dice...\n");
     srand(time(NULL));
 
@@ -20,5 +20,10 @@ int main() {
     printf("Die 2: %d\n", die2);
     printf("Total value: %d\n", totalValue);
 
+    if (totalValue == 7 || totalValue == 11) {
+        printf("You won!\n");
+    } else {
+        printf("You lost!\n");
+    }
     return 0;
 }
