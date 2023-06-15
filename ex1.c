@@ -1,29 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
 
-int rollDice() {
-    return rand() % 6 + 1;
-}
-
-int main() {
-    int die1, die2, totalValue;
+int main(){
+ int i, num, heads=0, tails=0;
     
-    printf("Rolling dice...\n");
-    srand(time(NULL));
-
-    die1 = rollDice();
-    die2 = rollDice();
-    totalValue = die1 + die2;
-
-    printf("Die 1: %d\n", die1);
-    printf("Die 2: %d\n", die2);
-    printf("Total value: %d\n", totalValue);
-
-    if (totalValue == 7 || totalValue == 11) {
-        printf("You won!\n");
-    } else {
-        printf("You lost!\n");
+    
+    char str[8];
+    printf("Who are you?");
+    scanf("%s", str);
+    printf("Hello,%s\n", str);
+    
+    
+    printf("Tossing a coin...\n");
+    
+    for (i=0; i<3 i++){
+    num = rand();
+        if(num%2==0){
+        printf("Round %d Head\n", i+1);
+            heads++;
+        }else {
+        printf("Round %d Tail\n", i+1);
+            tails++;
+        }
     }
-    return 0;
+    
+    printf("Heads: %d, Tails: %d\n", heads, tails);
+    
+ return 0;   
 }
