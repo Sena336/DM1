@@ -8,11 +8,12 @@ int rollDice() {
 
 int main() {
     int die1, die2, totalValue;
-
+    
     char str[8];
     printf("Who are you?");
     scanf("%s", str);
     printf("Hello,%s\n", str);
+    
     
     printf("Rolling dice...\n");
     srand(time(NULL));
